@@ -1,0 +1,11 @@
+zerops:
+  - setup: docker
+    run:
+      base: docker:26.1
+      prepareCommands:
+        - docker compose up -d
+      start:
+        cmd: docker compose up
+    ports:
+      - port: 26656
+      - port: 26657
